@@ -1,0 +1,29 @@
+
+
+/* Styles for tab labels */
+.mat-tab-label {
+   
+    padding: 5px;
+    background-color: transparent;
+    color: white;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+   
+    padding: 5px;
+    background-color: transparent;
+    color: blue;
+    font-weight: 700;
+}
+
+
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  body{background-color: black;}
