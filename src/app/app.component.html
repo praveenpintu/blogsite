@@ -9,36 +9,29 @@
 <body>
  
  <mat-tab-group [selectedIndex]="1">
-  <mat-tab label="Home">
-    
-    <mat-card class="example-card" *ngFor="let c of demo" >
-    <mat-card-header >
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title> Nallatigala Praveen</mat-card-title>
-      <mat-card-subtitle><div style="display: inline;font-size: 7px;vertical-align: middle;"> 🟢</div> warangal</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src={{c.a}} alt="Image Not Available">
-    <mat-card-content>
-      <h4 > {{c.b}} </h4>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
 
-  </mat-card>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon >home</mat-icon>Home
+    </ng-template>
+    <app-home> </app-home>
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+     My Bio
+    </ng-template>
+    <app-bio>  </app-bio>
+  </mat-tab>
+
   
+  <mat-tab>
+    <ng-template mat-tab-label >
+      ☎️ Contact
+    </ng-template>
+    <app-contact> </app-contact>
+  </mat-tab>
 
-</mat-tab>
-
-
-  <mat-tab label="My Bio"   >  <app-bio>  </app-bio>  </mat-tab>
-
-
-  <mat-tab label="Family" > <app-family> </app-family> </mat-tab>
-
-
-  <mat-tab label="Contact"> <app-contact> </app-contact> </mat-tab>
 
 
 </mat-tab-group>

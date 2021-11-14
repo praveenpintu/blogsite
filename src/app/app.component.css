@@ -3,7 +3,8 @@
 /* Styles for tab labels */
 .mat-tab-label {
    
-    padding: 5px;
+   
+   height: 30%;
     background-color: transparent;
     color: white;
     font-weight: 700;
@@ -12,11 +13,11 @@
 
 /* Styles for the active tab label */
 .mat-tab-label.mat-tab-label-active {
-   
-    padding: 5px;
+   width: 30%; 
     background-color: transparent;
-    color: blue;
+   color: #1A73E8;
     font-weight: 700;
+   
 }
 
 

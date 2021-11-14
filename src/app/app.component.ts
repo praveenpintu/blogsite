@@ -16,17 +16,10 @@ export class AppComponent {
 
 ]
 
-demo=[
-  {a:'https://material.angular.io/assets/img/examples/shiba2.jpg',b:'hello'},
-  {a:'https://material.angular.io/assets/img/examples/shiba2.jpg',b:'hii'},
-  {a:'https://material.angular.io/assets/img/examples/shiba2.jpg',b:'hey'}
 
 
 
-]
 
-
-tabClick(){alert();}
 
 }
 
