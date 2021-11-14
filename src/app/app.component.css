@@ -1,10 +1,14 @@
 
 
 /* Styles for tab labels */
+.mat-tab{position: fixed;}
+.mat-tab-header {
+  position: fixed;
+}
 .mat-tab-label {
    
    
-   height: 30%;
+   height: 30%;position: fixed;
     background-color: transparent;
     color: white;
     font-weight: 700;

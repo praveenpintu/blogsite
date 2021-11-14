@@ -21,11 +21,11 @@ body{color: white;margin: 0;background-color: rgb(16,1,1);min-height: 100vh;}
 
 .boximage{border-radius: 10%;width: 80%;}
 .moon{
-    box-shadow: 0 0 50px #eee;
-  margin-top: 12%;float: right;
+    box-shadow: 0 0 60px #eee;
+  margin-top: 5%;float: right;margin-right: 5%;
     transform: translate(-50%, -50%);
-    height: 50px;
-    width: 50px;
+    height: 25px;
+    width: 25px;
    
     border-radius: 90%;
     background-image: linear-gradient(
