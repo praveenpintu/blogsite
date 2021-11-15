@@ -1,0 +1,18 @@
+.example-header-image {
+    background-image: url('https://images.pexels.com/photos/10250965/pexels-photo-10250965.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background-size: cover;
+  }
+
+  .scroll-to-top {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+   }
+   .show-scrollTop {
+    opacity: 1;
+    transition: all .2s ease-in-out;
+   }
+
+   .btn{background-color: #FF0000;border:0px;border-radius: 20px 30px;}

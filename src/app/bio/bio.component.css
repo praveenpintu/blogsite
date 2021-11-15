@@ -1,4 +1,4 @@
-body{color: white;margin: 0;background-color: rgb(16,1,1);min-height: 100vh;}
+body{color: white;margin: 0;background-color: rgb(16,1,1);min-height: 94vh;}
 
 
 /* Create two equal columns that floats next to each other */
@@ -19,7 +19,20 @@ body{color: white;margin: 0;background-color: rgb(16,1,1);min-height: 100vh;}
     box-sizing: border-box;
   }
 
-.boximage{border-radius: 10%;width: 80%;}
+.btn-grad{border: 0px;text-align: center;padding: 5%;border-radius: 5px;margin: 10%;
+  animation: myfirst 5s linear 0s infinite alternate;color: white;background-color: transparent;
+  
+}
+
+@keyframes myfirst {
+  0%   {background-color:red;}
+  25%  {background-color:yellow; }
+  50%  {background-color:blue; }
+  75%  {background-color:green;}
+  100% {background-color:red;}
+}
+
+.boximage{border-radius: 5%;width: 80%;}
 .moon{
     box-shadow: 0 0 60px #eee;
   margin-top: 5%;float: right;margin-right: 5%;
@@ -27,6 +40,8 @@ body{color: white;margin: 0;background-color: rgb(16,1,1);min-height: 100vh;}
     height: 25px;
     width: 25px;
    
+   
+
     border-radius: 90%;
     background-image: linear-gradient(
 45deg,
@@ -50,10 +65,12 @@ yellow 100%
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
   }
   
   /* Modal Content */
   .modal-content {
+    border-radius: 6px;
     background-color: #fefefe;
     margin: auto;
     padding: 10px;
@@ -66,6 +83,8 @@ yellow 100%
   .close {
     background-color: transparent;border: 0px;
     float: right;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold;
   }
+
+  

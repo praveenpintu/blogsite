@@ -13,6 +13,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { HomeComponent } from './home/home.component';
 import {MatIconModule} from '@angular/material/icon';
 import { MatTreeModule } from '@angular/material/tree';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,7 @@ import { MatTreeModule } from '@angular/material/tree';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule,MatSnackBarModule,
     BrowserAnimationsModule,MatTabsModule,MatCardModule,MatGridListModule,MatIconModule,MatTreeModule
   ],
   providers: [],

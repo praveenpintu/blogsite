@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class BioComponent implements OnInit {
+  clickTimes=0;
  
 
   constructor() {
@@ -17,8 +18,15 @@ export class BioComponent implements OnInit {
   }
 
   familybox(){
+    this.clickTimes=this.clickTimes+1
     const a=<HTMLElement> document.getElementById("family")
     a.style.display="block";
+    
+    if(this.clickTimes%2==0)
+    {
+      const a=<HTMLElement> document.getElementById("family")
+      a.style.display="none";
+    }
 
   }
   familyclose()
@@ -40,9 +48,11 @@ export class BioComponent implements OnInit {
   
 
   ngOnInit(): void {
+   
   }
 
   open(){
+    
     const a=<HTMLElement> document.getElementById("popBox")
     a.style.display="block";
 
