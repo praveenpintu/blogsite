@@ -32,13 +32,10 @@ export class HomeComponent implements OnInit {
 
   homeFeed=[
     {a:'assets/black_wallpaper.png',b:'Never Let Your Feelings Get Too Deep, people Can Change Any Time'},
-    {a:'assets/imagewith_phone.jpg',b:''},
-    {a:'assets/sittingdown_image.jpg',b:''},
-    {a:'assets/selfie_image.jpg',b:''},  
-    {a:'assets/pool_image.jpg',b:''},
-   
-    {a:'assets/backside_img.jpg',b:''},
-    {a:'https://images.pexels.com/photos/9796484/pexels-photo-9796484.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',b:"There will Be Hard Days, But They Won't last"}
+    {a:'assets/sittingdown_image.jpg',b:"Just bcz Most Don't Make It Doesn't Meant U Can't "},
+    {a:'assets/selfie_image.jpg',b:"Sometimes It's Better To Be Alone, Nobody Can Hurt You"},  
+    {a:'assets/pool_image.jpg',b:'If you Get Tired, Learn To Rest, Not Quit'},
+    {a:'assets/backside_img.jpg',b:"If No One Hates You You're Doing Something Boring"}
   
   
   ]

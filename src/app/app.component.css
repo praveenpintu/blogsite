@@ -24,7 +24,9 @@
    
 }
 
-
+img {
+  image-rendering: pixelated;
+}
   
   
 

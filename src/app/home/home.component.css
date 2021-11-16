@@ -3,6 +3,9 @@
     background-size: cover;
   }
 
+  img {
+    image-rendering: pixelated;
+  }
   .scroll-to-top {
     position: fixed;
     bottom: 15px;

@@ -9,14 +9,14 @@
 <body>
     
     <mat-card class="example-card" *ngFor="let c of homeFeed" >
-        <mat-card-header >
+        <mat-card-header style="margin-left: 10%;" >
           <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title> Nallatigala Praveen</mat-card-title>
+          <mat-card-title> Nallatigala Praveen <img width="27px" src="assets/tick_icon.ico" alt=""> </mat-card-title>
           <mat-card-subtitle><div style="display: inline;font-size: 7px;vertical-align: middle;"> 🟢</div> warangal</mat-card-subtitle>
         </mat-card-header>
-        <img  mat-card-image src={{c.a}} loading="lazy" alt="Image Not Available">
-        <mat-card-content>
-          <h4 ><strong>&#10077; {{c.b}} &#10078; </strong> ~Unknown  </h4>
+        <img style="width: 80%;margin-left: 10%;border-radius: 10px;" mat-card-image src={{c.a}} loading="lazy" alt="Image Not Available">
+        <mat-card-content style="background-color: #eee; text-align: center;border-radius: 10px 20px;border: 1px solid blue;margin-top: -15px;">
+          <h4 > &#10077; {{c.b}} &#10078; ~ <strong>Unknown  </strong>  </h4>
         </mat-card-content>
       
     
