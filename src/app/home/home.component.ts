@@ -10,6 +10,9 @@ import { DOCUMENT } from '@angular/common';
 export class HomeComponent implements OnInit {
 
   windowScrolled: boolean | undefined;
+  imgBtnClk=0;
+
+
   constructor(@Inject(DOCUMENT) private document: Document) {}
   @HostListener("window:scroll", [])
   onWindowScroll() {
@@ -31,14 +34,16 @@ export class HomeComponent implements OnInit {
 
 
   homeFeed=[
-    {a:'assets/black_wallpaper.png',b:'Never Let Your Feelings Get Too Deep, people Can Change Any Time'},
+    {a:'https://images.pexels.com/photos/6945/sunset-summer-golden-hour-paul-filitchkin.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',b:'Never Let Your Feelings Get Too Deep, people Can Change Any Time'},
     {a:'assets/sittingdown_image.jpg',b:"Just bcz Most Don't Make It Doesn't Meant U Can't "},
     {a:'assets/selfie_image.jpg',b:"Sometimes It's Better To Be Alone, Nobody Can Hurt You"},  
     {a:'assets/pool_image.jpg',b:'If you Get Tired, Learn To Rest, Not Quit'},
-    {a:'assets/backside_img.jpg',b:"If No One Hates You You're Doing Something Boring"}
+    {a:'assets/backside_img.jpg',b:"If No One Hates You, You're Doing Something Boring"}
   
   
   ]
+
+ 
 
   
 

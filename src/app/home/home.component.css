@@ -18,4 +18,7 @@
     transition: all .2s ease-in-out;
    }
 
-   .btn{background-color: #FF0000;border:0px;border-radius: 20px 30px;}
+   .btn{background-color: #FF0000;border:0px;border-radius: 30%;width: 130%;height: 30px;}
+   .imgButton{
+    background-color: transparent;
+  }

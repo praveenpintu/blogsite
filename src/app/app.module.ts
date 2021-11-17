@@ -14,18 +14,20 @@ import { HomeComponent } from './home/home.component';
 import {MatIconModule} from '@angular/material/icon';
 import { MatTreeModule } from '@angular/material/tree';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { WebcamModule } from 'ngx-webcam';
+
 @NgModule({
   declarations: [
     AppComponent,
     BioComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
     
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,MatSnackBarModule,
+    AppRoutingModule,MatSnackBarModule,WebcamModule,
     BrowserAnimationsModule,MatTabsModule,MatCardModule,MatGridListModule,MatIconModule,MatTreeModule
   ],
   providers: [],

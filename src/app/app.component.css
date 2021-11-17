@@ -8,10 +8,10 @@
 .mat-tab-label {
    
    
-   height: 30%;position: fixed;
+    position: fixed;
     background-color: transparent;
     color: white;
-    font-weight: 700;
+    font-weight: 800;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
