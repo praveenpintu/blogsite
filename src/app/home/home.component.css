@@ -1,5 +1,5 @@
 .example-header-image {
-    background-image: url('https://images.pexels.com/photos/10250965/pexels-photo-10250965.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background-image: url('src/assets/selfie_image.jpg');
     background-size: cover;
   }
 

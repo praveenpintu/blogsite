@@ -10,7 +10,7 @@
    
     position: fixed;
     background-color: transparent;
-    color: white;
+    color: black;
     font-weight: 800;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -30,4 +30,4 @@ img {
   
   
 
-  body{background-color: black;}
+  body{background-color: white;}

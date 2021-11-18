@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import{MatTabsModule} from '@angular/material/tabs'
 import { MatCardModule} from '@angular/material/card';
-import { BioComponent } from './bio/bio.component';
 import { ContactComponent } from './contact/contact.component'; 
 import {MatGridListModule} from '@angular/material/grid-list';
 import { HomeComponent } from './home/home.component';
@@ -15,19 +14,22 @@ import {MatIconModule} from '@angular/material/icon';
 import { MatTreeModule } from '@angular/material/tree';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { WebcamModule } from 'ngx-webcam';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { BioComponent } from './bio/bio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BioComponent,
+    
     ContactComponent,
     HomeComponent,
+    BioComponent,
     
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,MatSnackBarModule,WebcamModule,
+    AppRoutingModule,MatSnackBarModule,WebcamModule,MatExpansionModule,
     BrowserAnimationsModule,MatTabsModule,MatCardModule,MatGridListModule,MatIconModule,MatTreeModule
   ],
   providers: [],

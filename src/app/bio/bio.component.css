@@ -1,10 +1,20 @@
-body{color: white;margin: 0;background-color: rgb(16,1,1);min-height: 94vh;}
 
+
+.example-card3{ animation: MoveDown 5s linear infinite;
+ }
+
+ .example-card5{ animation: MoveUp 5s linear infinite;
+ }
+
+.mat-card-subtitle {color: black;}
+
+body{color: black;margin: 0;min-height: 94vh;}
+.boximage{border-radius: 5%;width: 80%;}
 
 /* Create two equal columns that floats next to each other */
 .column {
     float: left;
-    width: 50%;
+    width: 48%;
     padding: 10px;
    
   }
@@ -19,71 +29,15 @@ body{color: white;margin: 0;background-color: rgb(16,1,1);min-height: 94vh;}
     box-sizing: border-box;
   }
 
-.btn-grad{border: 0px;text-align: center;width: 70%;height: 30px ;border-radius: 5px;margin-top: 19%;
-  animation: myfirst 5s linear 0s infinite alternate;color: white;background-color: transparent;
-  
-}
-
-@keyframes myfirst {
-  0%   {background-color:red;}
-  25%  {background-color:yellow; }
-  50%  {background-color:blue; }
-  75%  {background-color:green;}
-  100% {background-color:red;}
-}
-
-.boximage{border-radius: 5%;width: 80%;}
-.moon{
-    box-shadow: 0 0 60px #eee;
-    margin-top: 3%;float: right;
-    transform: translate(-50%, -50%);
-    height: 25px;
-    width: 25px;
-    border-radius: 90%;
-    background-image: linear-gradient(
-45deg,
-lightyellow 0%,
-yellow 90%,
-yellow 100%
-);
-  }
-
-
-  /* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  @keyframes MoveDown {
     
+      from {top:0px; opacity: 1;}
+      to {top:500px; opacity: 1;}
+      
   }
-  
-  /* Modal Content */
-  .modal-content {
-    border-radius: 6px;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 10px;
-    margin-top: 15%;
-    border: 1px solid #888;
-    width: 88%;
-  }
-  
-  /* The Close Button */
-  .close {
-    background-color: transparent;border: 0px;
-    float: right;
-    font-size: 35px;
-    font-weight: bold;
-  }
-  img {
-    image-rendering: pixelated;
-  }
-  
+  @keyframes MoveUp {
+    
+    from {top:100px; opacity: 1;}
+    to {top:0px; opacity: 1;}
+    
+}
