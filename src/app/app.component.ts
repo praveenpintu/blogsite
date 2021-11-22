@@ -1,4 +1,6 @@
 import { Component,HostListener,ViewEncapsulation } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { LoginComponent } from './login/login.component';
 
 
 @Component({
@@ -10,11 +12,13 @@ import { Component,HostListener,ViewEncapsulation } from '@angular/core';
 export class AppComponent {
   title = 'praveen';
 
-
-
-
-
-
+  constructor(public dialog: MatDialog) {  setTimeout(() => { this.login()}, 1000);
 }
 
 
+  login()
+  {
+    this.dialog.open(LoginComponent,{disableClose:true,width:'65%',height:'50%'});
+
+  }
+}
