@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MyresumeComponent } from '../myresume/myresume.component';
 
 @Component({
   selector: 'app-bio',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BioComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
+
+  resume(){ this.dialog.open(MyresumeComponent,{width:'auto',height:'auto'});
+  }
 
   ngOnInit(): void {
   }

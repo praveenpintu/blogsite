@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MyresumeComponent } from '../myresume/myresume.component';
 
 @Component({
   selector: 'app-contact',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+ constructor(){}
 
   fbbox()
   {

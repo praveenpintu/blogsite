@@ -24,6 +24,7 @@ import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from '../environments/environment';
 import { AuthService } from './services/auth.service';
+import { MyresumeComponent } from './myresume/myresume.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { AuthService } from './services/auth.service';
     HomeComponent,
     BioComponent,
     LoginComponent,
+    MyresumeComponent,
     
     
   ],
