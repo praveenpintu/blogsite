@@ -11,17 +11,17 @@
  <div style="text-align: center;">
    
  <h1 mat-dialog-title  *ngIf="!authserviceService.LoginSuccess" >Hi 👋</h1>
- <h1 mat-dialog-title  *ngIf="authserviceService.LoginSuccess" >Welcome👋</h1>
 <div mat-dialog-content *ngIf="!authserviceService.LoginSuccess">For security concerns, Please Login first</div>
-
+<br>
 <div class="formGroup">
 
     <button type="button" class="GoogleLoginButton" (click)="authserviceService.GoogleAuth()" *ngIf="!authserviceService.LoginSuccess">
         <img src="assets/google.ico" alt="" style="margin-right: 3%;vertical-align: middle;">
          Google
     </button>
+    <h3 style="text-align: center;color: red;" *ngIf="authserviceService.loginFailed" > ⚡<strong> Oops!  Login Failed !   </strong> ⚡</h3>
 
-    <h2 style="text-align: center;" *ngIf="authserviceService.LoginSuccess"><br> ✔️Succesfully Login Done !</h2>
+    <h3 style="text-align: center;" *ngIf="authserviceService.LoginSuccess"> Welcome👋<br> ✅ Succesfully Login Done !</h3>
      <br>
      <button *ngIf="authserviceService.LoginSuccess"  mat-button mat-dialog-close style="color: white;background-color: tomato;border: 0px;font-size: 1.6em;border-radius: 5px;" >Close</button>
   
@@ -30,9 +30,6 @@
 
 </div>
 
-<div >
-
-</div>
 
 </body>
 </html>

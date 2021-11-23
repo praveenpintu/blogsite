@@ -9,6 +9,7 @@ import { Auth, GoogleAuthProvider } from 'firebase/auth';
 export class AuthService {
 
   LoginSuccess=false;
+  loginFailed!: boolean;
 
   constructor( public afAuth: AngularFireAuth) { }
 
@@ -22,6 +23,7 @@ export class AuthService {
         console.log('You have been successfully logged in!')
         this.LoginSuccess=true
     }).catch((error: any) => {
+      this.loginFailed=true
         console.log(error)
     })
   }
