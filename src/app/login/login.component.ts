@@ -8,7 +8,16 @@ import { AuthService } from '../services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
+  user="buddy"
   constructor(public authserviceService:AuthService){}
+
+  async Loginwithgoogle()
+  {
+    await this.authserviceService.GoogleAuth()
+
+    this.user=this.authserviceService.userNameFun()
+  
+  }
 
   ngOnInit(): void {
   }

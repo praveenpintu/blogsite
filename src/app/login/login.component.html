@@ -15,13 +15,13 @@
 <br>
 <div class="formGroup">
 
-    <button type="button" class="GoogleLoginButton" (click)="authserviceService.GoogleAuth()" *ngIf="!authserviceService.LoginSuccess">
+    <button type="button" class="GoogleLoginButton" (click)="Loginwithgoogle()" *ngIf="!authserviceService.LoginSuccess">
         <img src="assets/google.ico" alt="" style="margin-right: 3%;vertical-align: middle;">
          Google
     </button>
     <h3 style="text-align: center;color: red;" *ngIf="authserviceService.loginFailed" > ⚡<strong> Oops!  Login Failed !   </strong> ⚡</h3>
 
-    <h3 style="text-align: center;" *ngIf="authserviceService.LoginSuccess"> Welcome👋<br> ✅ Succesfully Login Done !</h3>
+    <h3 style="text-align: center;" *ngIf="authserviceService.LoginSuccess"> Welcome !🔥<strong>{{user}}</strong><br> ✅ Succesfully Login Done </h3>
      <br>
      <button *ngIf="authserviceService.LoginSuccess"  mat-button mat-dialog-close style="color: white;background-color: tomato;border: 0px;font-size: 1.6em;border-radius: 5px;" >Close</button>
   
