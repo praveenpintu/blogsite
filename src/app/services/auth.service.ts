@@ -47,6 +47,7 @@ export class AuthService {
        
     }).catch((error: any) => {
       this.loginFailed=true
+      this.userInfo.push(error.message)
         console.log(error)
     })
   }
