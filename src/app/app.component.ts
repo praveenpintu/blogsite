@@ -18,7 +18,7 @@ export class AppComponent {
 
   login()
   {
-     this.dialog.open(LoginComponent,{disableClose:true,width:'65%',height:'36%'});
+    this.dialog.open(LoginComponent,{disableClose:true,width:'65%',height:'auto'});
 
   }
 }

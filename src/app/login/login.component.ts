@@ -8,7 +8,9 @@ import { AuthService } from '../services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
+ 
   user="buddy"
+  userInfo:string[]=[]
   constructor(public authserviceService:AuthService){}
 
   async Loginwithgoogle()
@@ -16,6 +18,8 @@ export class LoginComponent implements OnInit {
     await this.authserviceService.GoogleAuth()
 
     this.user=this.authserviceService.userNameFun()
+    this.userInfo=this.authserviceService.userData()
+    console.log("userInfo in login component",this.userInfo)
   
   }
 

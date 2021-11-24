@@ -12,22 +12,27 @@
    
  <h1 mat-dialog-title  *ngIf="!authserviceService.LoginSuccess" >Hi 👋</h1>
 <div mat-dialog-content *ngIf="!authserviceService.LoginSuccess">For security concerns, Please Login first</div>
-<br>
+<br><br>
 <div class="formGroup">
 
     <button type="button" class="GoogleLoginButton" (click)="Loginwithgoogle()" *ngIf="!authserviceService.LoginSuccess">
         <img src="assets/google.ico" alt="" style="margin-right: 3%;vertical-align: middle;">
          Google
     </button>
-    <h3 style="text-align: center;color: red;" *ngIf="authserviceService.loginFailed" > ⚡<strong> Oops!  Login Failed !   </strong> ⚡</h3>
+    <h3 style="text-align: center;color: red;" *ngIf="authserviceService.loginFailed" > <br> ⚡<strong> Oops!  Login Failed !   </strong> ⚡<br> refresh the page & try again</h3>
 
     <h3 style="text-align: center;" *ngIf="authserviceService.LoginSuccess"> Welcome !🔥<strong>{{user}}</strong><br> ✅ Succesfully Login Done </h3>
      <br>
      <button *ngIf="authserviceService.LoginSuccess"  mat-button mat-dialog-close style="color: white;background-color: tomato;border: 0px;font-size: 1.6em;border-radius: 5px;" >Close</button>
-  
-
+     
+    
 </div>
+<br>
+<div *ngIf="authserviceService.LoginSuccess" style="text-align: center;font-size: 0.7em;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;color: black;">
+    <p> <strong> lastsignIn: </strong> {{userInfo[0]}}  <br><strong> AccountCreatedOn: </strong>  {{userInfo[1]}}  </p>  
+    <p style="text-align: center;"> <strong style="color: red;">**</strong>  +( 5:30 hrs IST)</p>
 
+ </div>
 </div>
 
 
