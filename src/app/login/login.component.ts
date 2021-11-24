@@ -19,7 +19,6 @@ export class LoginComponent implements OnInit {
 
     this.user=this.authserviceService.userNameFun()
     this.userInfo=this.authserviceService.userData()
-    console.log("userInfo in login component",this.userInfo)
   
   }
 

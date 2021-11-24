@@ -28,9 +28,9 @@
     
 </div>
 <br>
-<div *ngIf="authserviceService.LoginSuccess" style="text-align: center;font-size: 0.7em;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;color: black;">
-    <p> <strong> lastsignIn: </strong> {{userInfo[0]}}  <br><strong> AccountCreatedOn: </strong>  {{userInfo[1]}}  </p>  
-    <p style="text-align: center;"> <strong style="color: red;">**</strong>  +( 5:30 hrs IST)</p>
+<div *ngIf="authserviceService.LoginSuccess" style="text-align: center;font-size: 0.7em;color: black;">
+    <p> <strong>signInAt: </strong> {{userInfo[0]}}  <br><strong> FirstSignIn: </strong>  {{userInfo[1]}}  </p>  
+    <p style="text-align: center;"> <strong style="color: red;">*</strong> ( + 5:30 hrs for IST )</p>
 
  </div>
 </div>
