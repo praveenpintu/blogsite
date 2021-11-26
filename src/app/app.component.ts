@@ -12,11 +12,7 @@ import { LoginComponent } from './login/login.component';
 export class AppComponent {
   title = 'praveen';
 
-<<<<<<< HEAD
   constructor(public dialog: MatDialog) { 
-=======
-  constructor(public dialog: MatDialog) {  setTimeout(() => { this.login()}, 100);
->>>>>>> 0590bbcbc8a57709113289e1eaa6dfa9648a2c91
 }
 
 ngOnInit(): void {
