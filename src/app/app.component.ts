@@ -12,13 +12,13 @@ import { LoginComponent } from './login/login.component';
 export class AppComponent {
   title = 'praveen';
 
-  constructor(public dialog: MatDialog) {  setTimeout(() => { this.login()}, 1000);
+  constructor(public dialog: MatDialog) { 
 }
 
+ngOnInit(): void {
+  this.dialog.open(LoginComponent,{disableClose:true,width:'65%',height:'auto'});
 
-  login()
-  {
-    this.dialog.open(LoginComponent,{disableClose:true,width:'65%',height:'auto'});
+}
 
-  }
+  
 }
