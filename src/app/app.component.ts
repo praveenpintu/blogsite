@@ -12,7 +12,7 @@ import { LoginComponent } from './login/login.component';
 export class AppComponent {
   title = 'praveen';
 
-  constructor(public dialog: MatDialog) {  setTimeout(() => { this.login()}, 1000);
+  constructor(public dialog: MatDialog) {  setTimeout(() => { this.login()}, 400);
 }
 
 
