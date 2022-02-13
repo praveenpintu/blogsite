@@ -17,7 +17,7 @@
 
     <button type="button" class="GoogleLoginButton" (click)="Loginwithgoogle()" *ngIf=" (!authserviceService.LoginSuccess) && (!authserviceService.loginFailed)">
         <img src="assets/google.ico" alt="" style="margin-right: 3%;vertical-align: middle;">
-         Google
+         Login 
     </button>
     <h3 style="text-align: center;color: red;" *ngIf="authserviceService.loginFailed" > <br> ⚡<strong> Oops!  Login Failed !   </strong> ⚡<br>😔sorry! <article style="font-size: 0.9em;"> {{userInfo[0].substring(10)}} - N.Praveen</article>  </h3>
 
