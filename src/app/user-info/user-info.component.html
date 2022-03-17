@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: transparent;color: green;">
+   
+   Hi Buddy,
+    <div style="margin-left: 5px;"><br>
+        <span typingAnimation [typeSpeed]="10" [condition]="start" [startDelay]="1000"  >
+            C:\Users\praveen> Hey {{LoginUserData.displayName}} I'm Praveen 
+       </span> <br>
+       <span typingAnimation [typeSpeed]="10" [condition]="start" [startDelay]="2000" (complete)="onTypingAnimationComplete1()" >
+        C:\Users\praveen> Started Fetching Your Info..............Loading.......
+   </span> <br>
+  
+       <span typingAnimation [typeSpeed]="10" [condition]="first" [startDelay]="1000" (complete)="onTypingAnimationComplete2()">
+       {{firstLine}} 
+      </span> <a id="link" style="display: none;" href="{{LoginUserData.photoURL}}" target="_blank"><b>click here </b></a> 
+        <span typingAnimation [typeSpeed]="10" [condition]="second" [startDelay]="1000" (complete)="onTypingAnimationComplete3()">
+            {{secondLine}} 
+        </span><br>
+        <span typingAnimation [typeSpeed]="20" [condition]="third" [startDelay]="1000">
+         {{thirdLine}}
+        </span><br>
+    </div>
+    
+</body>
+</html>

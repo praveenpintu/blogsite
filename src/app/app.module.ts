@@ -25,6 +25,10 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from '../environments/environment';
 import { AuthService } from './services/auth.service';
 import { MyresumeComponent } from './myresume/myresume.component';
+import { UserInfoComponent } from './user-info/user-info.component';
+
+import { TypingAnimationModule } from "angular-typing-animation";
+import { ClipboardModule } from 'ngx-clipboard';
 
 @NgModule({
   declarations: [
@@ -35,6 +39,7 @@ import { MyresumeComponent } from './myresume/myresume.component';
     BioComponent,
     LoginComponent,
     MyresumeComponent,
+    UserInfoComponent,
     
     
   ],
@@ -45,7 +50,10 @@ import { MyresumeComponent } from './myresume/myresume.component';
     MatGridListModule,MatIconModule,MatTreeModule,MatDialogModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    TypingAnimationModule,
+    ClipboardModule
+
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

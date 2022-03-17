@@ -2,3 +2,13 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.no-padding .mat-dialog-container {
+    padding: 2px !important;
+    background: black;
+}
+
+.no-scrolls .mat-dialog-container {
+    overflow: hidden !important;
+    background: black;
+}

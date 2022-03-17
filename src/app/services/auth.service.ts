@@ -13,6 +13,8 @@ export class AuthService {
   LoginSuccess=false;
   userName!: string;
   loginFailed!: boolean;
+  userInfoComponentData:any
+
   userNameFun()
   {
     return this.userName
@@ -29,14 +31,19 @@ export class AuthService {
   GoogleAuth() {
     return this.AuthLogin(new GoogleAuthProvider());
     
-  }  
+  } 
+  SendDataToUserInfoComponent()
+  {
+  return this.userInfoComponentData
+  } 
 
   AuthLogin(provider: any) {
     return this.afAuth.signInWithPopup(provider)
     .then((result: any) => {
       console.log('You have been successfully logged in!')
         this.LoginSuccess=true
-       
+        this.userInfoComponentData = result.user._delegate
+
         this.userName=result.user._delegate.displayName
       
         this.userInfo.push(result.user.metadata.lastSignInTime) 
