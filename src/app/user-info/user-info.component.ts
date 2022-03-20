@@ -5,6 +5,7 @@ import { inject } from '@angular/core/testing';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ClipboardService } from 'ngx-clipboard';
 import { delay } from 'rxjs-compat/operator/delay';
+import { timeout } from 'rxjs-compat/operator/timeout';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -35,13 +36,17 @@ export class UserInfoComponent implements OnInit {
 
     this.clipboardApi.copyFromContent(this.content)
 
-    
+    setTimeout(()=>{var a=<HTMLElement> document.getElementById("emoji")
+     a.style.textShadow ="0 0 0 red"}
+    ,1000)
 
    
   }
   onTypingAnimationComplete1()
   {
    this.first=true
+   var a=<HTMLElement> document.getElementById("emoji")
+     a.style.textShadow ="0 0 0 orange"
    setTimeout(() => {
      
    }, 3000);
@@ -52,10 +57,30 @@ export class UserInfoComponent implements OnInit {
     a.style.display="block"
 
     this.second = true
+    var a=<HTMLElement> document.getElementById("emoji")
+     a.style.textShadow ="0 0 0 blue"
   }
   
   onTypingAnimationComplete3()
-  {
+  { 
     this.third = true
+    this.playSong()
+    var a=<HTMLElement> document.getElementById("emoji")
+     a.style.textShadow ="0 0 0 green"
+     var a=<HTMLElement> document.getElementById("emoji1")
+     a.style.display="block"
+
+
+
+  }
+
+  playSong()
+  {
+    let audio=new Audio();
+    audio.src="assets/song.mp3"
+    audio.load()
+    audio.play();
+    audio.volume=0.8
+    audio.loop=false
   }
 }

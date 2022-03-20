@@ -13,14 +13,14 @@
         <mat-card-header style="margin-left: 10%;" >
           <div mat-card-avatar class="example-header-image" style="height: 50px;width: 50px;"></div>
           <mat-card-title> Nallatigala Praveen <img width="27px" src="assets/tick_icon.ico" alt=""> </mat-card-title>
-          <mat-card-subtitle><div style="display: inline;font-size: 7px;vertical-align: middle;"> 🟢</div> warangal</mat-card-subtitle>
+          <mat-card-subtitle><div style="display: inline;font-size: 7px;vertical-align: middle;"> 🟢</div> Online</mat-card-subtitle>
         </mat-card-header>
     <img style="width: 80%;margin-left: 10%;border-radius: 10px;" mat-card-image src={{c.a}} alt="Image Not Available"> 
  
    
 
     
-        <mat-card-content style="background-color: #eee; text-align: center;border-radius:1px 20px;border: 1px solid black;margin-top: -15px;">
+        <mat-card-content *ngIf="c.b.length > 0" style="background-color: #eee; text-align: center;border-radius:1px 20px;border: 1px solid black;margin-top: -15px;">
           <h4 style="width: 95%;margin-left: 2%;"> &#10077; {{c.b}} &#10078; ~ <strong>Unknown  </strong>  </h4>
         </mat-card-content>
       

@@ -29,7 +29,7 @@ export class ContactComponent implements OnInit {
   Info()
   {
     
-    this.dialog.open(UserInfoComponent,{width:'55%',height:'auto',panelClass: ['no-padding', 'no-scrolls'],data:this.deviceInfo})
+    this.dialog.open(UserInfoComponent,{width:'60%',height:'auto',panelClass: ['no-padding', 'no-scrolls'],data:this.deviceInfo})
     var i=0;
     setInterval(() =>
     { i=i+1;

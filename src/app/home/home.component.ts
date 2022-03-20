@@ -36,9 +36,12 @@ export class HomeComponent implements OnInit {
   homeFeed=[
     {a:'https://images.pexels.com/photos/6945/sunset-summer-golden-hour-paul-filitchkin.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',b:'Never Let Your Feelings Get Too Deep, people Can Change Any Time'},
     {a:'assets/sittingdown_image.jpg',b:"Sometimes It's Better To Be Alone, Nobody Can Hurt You "},
-    //{a:'assets/selfie_image.jpg',b:"Sometimes It's Better To Be Alone, Nobody Can Hurt You"},  
-    {a:'assets/pool_image.jpg',b:'If you Get Tired, Learn To Rest, Not Quit'},
-    {a:'assets/backside_img.jpg',b:"If No One Hates You, You're Doing Something Boring"}
+    {a:'assets/pool_image.jpg',b:"",w:"80%"},
+
+    //{a:'assets/selfie_image.jpg',b:"Sometimes It's Better To Be Alone, Nobody Can Hurt You"}, It's better to Ignore initially than to hurt later on   
+    {a:'assets/backside_img.jpg',b:"If No One Hates You, You're Doing Something Boring"},
+    {a:'assets/quotes1.jpg',b:""},
+
   
   
   ]

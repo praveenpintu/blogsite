@@ -10,6 +10,8 @@ export class MyresumeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    
   }
 
 }
