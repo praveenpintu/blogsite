@@ -32,3 +32,7 @@ img {
   
 
   body{background-color: white;}
+
+  ::-webkit-scrollbar {
+    display: none;
+}

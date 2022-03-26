@@ -29,6 +29,7 @@ import { UserInfoComponent } from './user-info/user-info.component';
 
 import { TypingAnimationModule } from "angular-typing-animation";
 import { ClipboardModule } from 'ngx-clipboard';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { ClipboardModule } from 'ngx-clipboard';
     AngularFireAuthModule,
     AngularFirestoreModule,
     TypingAnimationModule,
-    ClipboardModule
+    ClipboardModule,
+    MatButtonModule
 
   ],
   providers: [AuthService],

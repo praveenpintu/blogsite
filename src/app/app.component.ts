@@ -2,6 +2,7 @@ import { Component,HostListener,ViewEncapsulation } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ClipboardService } from 'ngx-clipboard';
 import { LoginComponent } from './login/login.component';
+import { AuthService } from './services/auth.service';
 
 
 @Component({
@@ -15,7 +16,12 @@ export class AppComponent {
   content="I LOVE YOU PRAVEEN 💗"
 
 
-  constructor(public dialog: MatDialog,private clipboardApi: ClipboardService) { 
+  constructor(public dialog: MatDialog,private clipboardApi: ClipboardService,public authserviceService:AuthService) { 
+}
+
+logout()
+{
+window.location.reload()
 }
 
 ngOnInit(): void {
