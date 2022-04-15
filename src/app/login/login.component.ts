@@ -23,12 +23,15 @@ export class LoginComponent implements OnInit {
     this.user=this.authserviceService.userNameFun()
     this.userInfo=this.authserviceService.userData()
     
-    this.clipboardApi.copyFromContent(this.content)
 
 
     if(this.user != "buddy")
     this.playSong()
   
+  }
+  close()
+  { 
+    this.clipboardApi.copyFromContent(this.content)
   }
   playSong()
   {
@@ -38,7 +41,6 @@ export class LoginComponent implements OnInit {
     audio.play();
     audio.volume=0.8
     audio.loop=false
-
 
   }
 

@@ -23,7 +23,7 @@
 
     <h3 style="text-align: center;" *ngIf="authserviceService.LoginSuccess"> Welcome !🔥<strong>{{user}}</strong><br> ✅ Succesfully Login Done </h3>
      <br>
-     <button *ngIf="authserviceService.LoginSuccess"  mat-button mat-dialog-close style="color: white;background-color: tomato;border: 0px;font-size: 1.6em;border-radius: 5px;" >Close</button>
+     <button *ngIf="authserviceService.LoginSuccess"  mat-button mat-dialog-close (click)="close()" style="color: white;background-color: tomato;border: 0px;font-size: 1.6em;border-radius: 5px;" >Close</button>
      
     
 </div>
