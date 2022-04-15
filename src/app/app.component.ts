@@ -13,21 +13,25 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   title = 'praveen';
-  content="I LOVE YOU PRAVEEN 💗"
 
-
-  constructor(public dialog: MatDialog,private clipboardApi: ClipboardService,public authserviceService:AuthService) { 
+  constructor(public dialog: MatDialog,public authserviceService:AuthService) { 
 }
 
-logout()
+logout(a:any)
 {
+let dialogref=this.dialog.open(a,{disableClose:true,width:'50%',height:'auto',panelClass: ['no-scroll']})
+}
+closeButton()
+{
+
+window.close()
 window.location.reload()
+
 }
 
 ngOnInit(): void {
-  this.dialog.open(LoginComponent,{disableClose:true,width:'65%',height:'auto'});
+ this.dialog.open(LoginComponent,{disableClose:true,width:'65%',height:'auto'});
   
-  this.clipboardApi.copyFromContent(this.content)
 
 
 }

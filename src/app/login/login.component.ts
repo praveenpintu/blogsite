@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClipboardService } from 'ngx-clipboard';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -11,7 +12,9 @@ export class LoginComponent implements OnInit {
  
   user="buddy"
   userInfo:string[]=[]
-  constructor(public authserviceService:AuthService){}
+  content="I LOVE YOU PRAVEEN 💗"
+
+  constructor(public authserviceService:AuthService ,public clipboardApi: ClipboardService){}
 
   async Loginwithgoogle()
   {
@@ -19,7 +22,24 @@ export class LoginComponent implements OnInit {
 
     this.user=this.authserviceService.userNameFun()
     this.userInfo=this.authserviceService.userData()
+    
+    this.clipboardApi.copyFromContent(this.content)
+
+
+    if(this.user != "buddy")
+    this.playSong()
   
+  }
+  playSong()
+  {
+    let audio=new Audio();
+    audio.src="assets/song1.mp3"
+    audio.load()
+    audio.play();
+    audio.volume=0.8
+    audio.loop=false
+
+
   }
 
   ngOnInit(): void {

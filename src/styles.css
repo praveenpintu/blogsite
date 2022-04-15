@@ -17,3 +17,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin-left: 2%;
 
 }
+.no-scroll .mat-dialog-container {
+    overflow: hidden !important;
+    background: #ffb7f1;
+    margin-top: -10%;
+    margin-left: 2%;
+
+}

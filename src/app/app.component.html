@@ -38,7 +38,7 @@
 <mat-tab disabled style="position:relative">
   <ng-template mat-tab-label >
     <div style="margin-right: -60%;overflow: hidden;" *ngIf="authserviceService.LoginSuccess" >
-      <button   mat-raised-button color="primary" (click)="logout()">Logout &nbsp; <mat-icon >logout</mat-icon></button>
+      <button   mat-raised-button color="primary" (click)="logout(logoutform)">Logout &nbsp; <mat-icon >logout</mat-icon></button>
     </div>
   </ng-template>
 </mat-tab>
@@ -46,7 +46,14 @@
 
 </mat-tab-group>
 
-
+<ng-template #logoutform>
+  <h1 mat-dialog-title> </h1>
+<div mat-dialog-content style="text-align: center;color: black;font-size: 0.9rem;"> <b> Logout Done ! </b></div> <br>
+<div mat-dialog-content class="a" >  <h3> <b> ❤️ Have a nice day ❤️ </b> </h3>  </div> <br>
+<div mat-dialog-content style="text-align: center;">   <button  (click)="closeButton()"  mat-raised-button color="primary"  style="text-align: center;font-size: 0.6rem;"> Close </button> 
+</div>
+  <h1></h1>
+</ng-template>
 
 </body>
 

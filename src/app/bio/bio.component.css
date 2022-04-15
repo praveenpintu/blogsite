@@ -30,10 +30,19 @@ body{color: black;margin: 0;min-height: 94vh;}
     box-sizing: border-box;
   }
 
-  @keyframes example {
+  @keyframes example1 {
     0%   {background-color:red; color: white;}
     25%  {background-color:yellow; }
     50%  {background-color:blue; color: white;}
     75%  {background-color:green; }
     100% {background-color:red; color: white;}
   }
+
+  @keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+  
+  /* The element to apply the animation to */
