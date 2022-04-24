@@ -23,11 +23,7 @@ export class LoginComponent implements OnInit {
     this.user=this.authserviceService.userNameFun()
     this.userInfo=this.authserviceService.userData()
     
-
-
-    if(this.user != "buddy")
-    this.playSong()
-  
+      
   }
   close()
   { 
@@ -44,7 +40,7 @@ export class LoginComponent implements OnInit {
 
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {   
   }
 
 }

@@ -23,9 +23,11 @@ let dialogref=this.dialog.open(a,{disableClose:true,width:'50%',height:'auto',pa
 }
 closeButton()
 {
+ 
+    let b = window.open("http://www.google.com","_self")
+    window.close()
 
-window.close()
-window.location.reload()
+   //window.location.reload()
 
 }
 
