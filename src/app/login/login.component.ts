@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ClipboardService } from 'ngx-clipboard';
 import { AuthService } from '../services/auth.service';
+import { HttpClient  } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -13,8 +14,9 @@ export class LoginComponent implements OnInit {
   user="buddy"
   userInfo:string[]=[]
   content="I LOVE YOU PRAVEEN 💗"
+  useremail=''
 
-  constructor(public authserviceService:AuthService ,public clipboardApi: ClipboardService){}
+  constructor(public authserviceService:AuthService ,public clipboardApi: ClipboardService,private http:HttpClient){}
 
   async Loginwithgoogle()
   {
@@ -22,12 +24,36 @@ export class LoginComponent implements OnInit {
 
     this.user=this.authserviceService.userNameFun()
     this.userInfo=this.authserviceService.userData()
-    
+    this.useremail=this.authserviceService.userEmail()
       
   }
   close()
   { 
     this.clipboardApi.copyFromContent(this.content)
+    this.getIPAddress()
+
+
+  }
+
+   makeid() {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  
+    for (var i = 0; i < 5; i++)
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+  
+    return text;
+  }
+
+  getIPAddress()
+  {
+    this.http.get("http://api.ipify.org/?format=json").subscribe((res:any)=>{
+
+      this.authserviceService.addNewUser(this.makeid(),this.useremail,res.ip,this.userInfo)
+
+      
+    });
+   
   }
   playSong()
   {

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Auth, GoogleAuthProvider } from 'firebase/auth';
 
 
@@ -8,12 +9,14 @@ import { Auth, GoogleAuthProvider } from 'firebase/auth';
 })
 export class AuthService {
 
+
  
   userInfo:string[]=[]
   LoginSuccess=false;
   userName!: string;
   loginFailed!: boolean;
   userInfoComponentData:any
+  useremail=''
 
   userNameFun()
   {
@@ -25,8 +28,14 @@ export class AuthService {
     return this.userInfo
   }
 
+  userEmail()
+  {
+    return this.useremail
+  }
+  
 
-  constructor( public afAuth: AngularFireAuth) { }
+
+  constructor( public afAuth: AngularFireAuth,private db: AngularFirestore) { }
 
   GoogleAuth() {
     return this.AuthLogin(new GoogleAuthProvider());
@@ -37,6 +46,10 @@ export class AuthService {
   return this.userInfoComponentData
   } 
 
+  addNewUser(id:string, user:string, ip:string,time:string[]) {
+    this.db.collection('User').doc(id).set({user:user,ip:ip,time:time});
+   }
+
   AuthLogin(provider: any) {
     return this.afAuth.signInWithPopup(provider)
     .then((result: any) => {
@@ -46,8 +59,12 @@ export class AuthService {
 
         this.userName=result.user._delegate.displayName
       
+
         this.userInfo.push(result.user.metadata.lastSignInTime) 
         this.userInfo.push(result.user.metadata.creationTime)
+        this.useremail= result.user._delegate.email
+
+
        
 
         
