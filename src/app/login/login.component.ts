@@ -50,7 +50,6 @@ export class LoginComponent implements OnInit {
     this.http.get("https://api.ipify.org/?format=json").subscribe((res:any)=>{
 
       this.authserviceService.addNewUser(this.makeid(),this.useremail,res.ip,this.userInfo)
-
       
     });
    
