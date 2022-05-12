@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
 
   getIPAddress()
   {
-    this.http.get("http://api.ipify.org/?format=json").subscribe((res:any)=>{
+    this.http.get("https://api.ipify.org/?format=json").subscribe((res:any)=>{
 
       this.authserviceService.addNewUser(this.makeid(),this.useremail,res.ip,this.userInfo)
 
