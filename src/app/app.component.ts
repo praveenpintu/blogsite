@@ -32,7 +32,7 @@ closeButton()
 }
 
 ngOnInit(): void {
- this.dialog.open(LoginComponent,{disableClose:true,width:'65%',height:'auto'});
+// this.dialog.open(LoginComponent,{disableClose:true,width:'65%',height:'auto'});
   
 
 
