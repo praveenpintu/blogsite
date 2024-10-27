@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthService } from './services/auth.service';
 
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,8 +14,9 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   title = 'praveen';
+  isCopied = false
 
-  constructor(public dialog: MatDialog,public authserviceService:AuthService) { 
+  constructor(public dialog: MatDialog,public authserviceService:AuthService,private clipboardApi: ClipboardService) { 
 }
 
 logout(a:any)
@@ -31,8 +33,16 @@ closeButton()
 
 }
 
+onTabChange(){
+  if(!this.isCopied){
+    this.clipboardApi.copyFromContent('I 💗 YOU')
+  }
+  this.isCopied = true;
+
+}
+
 ngOnInit(): void {
-// this.dialog.open(LoginComponent,{disableClose:true,width:'65%',height:'auto'});
+ //this.dialog.open(LoginComponent,{disableClose:true,width:'65%',height:'auto'});
   
 
 

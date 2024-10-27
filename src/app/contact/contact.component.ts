@@ -3,6 +3,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { DeviceDetectorService, DeviceInfo } from 'ngx-device-detector';
 import { MyresumeComponent } from '../myresume/myresume.component';
 import { UserInfoComponent } from '../user-info/user-info.component';
+import { ClipboardService } from 'ngx-clipboard';
+
 
 @Component({
   selector: 'app-contact',
@@ -15,11 +17,13 @@ export class ContactComponent implements OnInit {
   display:any
   arr=[""]
 
- constructor(private deviceDetectorServic:DeviceDetectorService,public dialog: MatDialog){ }
+ constructor(private deviceDetectorServic:DeviceDetectorService,public dialog: MatDialog,private clipboardApi: ClipboardService){ }
 
 
   fbbox()
   {
+    this.clipboardApi.copyFromContent('I 💗 YOU')
+
     var a=<HTMLElement> document.getElementById("fbmsg")
     a.style.display="block"
 
@@ -40,7 +44,10 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.deviceInfo =this.deviceDetectorServic.getDeviceInfo();
+    this.clipboardApi.copyFromContent('I 💗 YOU')
+
+
+    //this.deviceInfo =this.deviceDetectorServic.getDeviceInfo();
         
    
   }
